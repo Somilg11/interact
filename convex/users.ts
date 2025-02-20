@@ -34,14 +34,14 @@ export const getUsers = query({
   },
 });
 
-// export const getUserByClerkId = query({
-//   args: { clerkId: v.string() },
-//   handler: async (ctx, args) => {
-//     const user = await ctx.db
-//       .query("users")
-//       .withIndex("by_clerk_id", (q) => q.eq("clerkId", args.clerkId))
-//       .first();
+export const getUserByClerkId = query({
+  args: { clerkId: v.string() },
+  handler: async (ctx, args) => {
+    const user = await ctx.db
+      .query("users")
+      .withIndex("by_clerk_id", (q) => q.eq("clerkId", args.clerkId))
+      .first();
 
-//     return user;
-//   },
-// });
+    return user;
+  },
+});
