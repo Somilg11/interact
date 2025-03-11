@@ -15,6 +15,8 @@ function MeetingPage() {
   const { call, isCallLoading } = useGetCallById(id);
 
   const [isSetupComplete, setIsSetupComplete] = useState(false);
+  const [isMicOn, setIsMicOn] = useState(true);
+  const [isCameraOn, setIsCameraOn] = useState(false);
 
   if (!isLoaded || isCallLoading) return <LoaderUI />;
 
@@ -30,12 +32,17 @@ function MeetingPage() {
     <StreamCall call={call}>
       <StreamTheme>
         {!isSetupComplete ? (
-          <MeetingSetup onSetupComplete={() => setIsSetupComplete(true)} />
+          <MeetingSetup
+            onSetupComplete={() => setIsSetupComplete(true)}
+            setIsMicOn={setIsMicOn}
+            setIsCameraOn={setIsCameraOn}
+          />
         ) : (
-          <MeetingRoom />
+          <MeetingRoom isMicOn={isMicOn} isCameraOn={isCameraOn} />
         )}
       </StreamTheme>
     </StreamCall>
   );
 }
+
 export default MeetingPage;

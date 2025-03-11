@@ -6,7 +6,11 @@ import { CameraIcon, MicIcon, SettingsIcon } from "lucide-react";
 import { Switch } from "./ui/switch";
 import { Button } from "./ui/button";
 
-function MeetingSetup({ onSetupComplete }: { onSetupComplete: () => void }) {
+function MeetingSetup({ onSetupComplete, setIsMicOn, setIsCameraOn }: { 
+  onSetupComplete: () => void; 
+  setIsMicOn: (state: boolean) => void; 
+  setIsCameraOn: (state: boolean) => void;
+}) {
   const [isCameraDisabled, setIsCameraDisabled] = useState(true);
   const [isMicDisabled, setIsMicDisabled] = useState(false);
 
@@ -19,10 +23,14 @@ function MeetingSetup({ onSetupComplete }: { onSetupComplete: () => void }) {
     else call.camera.enable();
   }, [isCameraDisabled, call.camera]);
 
+  setIsCameraOn(!isCameraDisabled);
+
   useEffect(() => {
     if (isMicDisabled) call.microphone.disable();
     else call.microphone.enable();
-  }, [isMicDisabled, call.microphone]);
+
+    setIsMicOn(!isMicDisabled);
+  }, [isMicDisabled, call.microphone, setIsMicOn]);
 
   const handleJoin = async () => {
     await call.join();
