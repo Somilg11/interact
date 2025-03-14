@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { clsx, type ClassValue } from "clsx";
 import { addHours, intervalToDuration, isAfter, isBefore, isWithinInterval } from "date-fns";
 import { twMerge } from "tailwind-merge";
