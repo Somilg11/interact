@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ![Interact](https://img.shields.io/badge/Interact-Next.js-blue) ![Version](https://img.shields.io/badge/version-0.1.0-green) ![License](https://img.shields.io/badge/license-MIT-orange)
 
-## Getting Started
+# Interact - Interviewing Platform 🚀
 
-First, run the development server:
+## Overview
+Interact is a modern interviewing platform built with **Next.js** and **Convex DB**. It provides seamless real-time collaboration features, including live coding, video conferencing, and interactive interview sessions.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features ✨
+- 🖥 **Live Coding Environment** using Monaco Editor
+- 🔄 **Real-time Collaboration** powered by Convex DB
+- 🔑 **Secure Authentication** with Clerk
+- 🎥 **Video & Audio Conferencing** via Stream.io
+- 🌙 **Dark Mode Support** with Next Themes
+- 🎨 **Interactive UI Components** using Radix UI
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack 🛠
+- **Frontend:** Next.js, React, Tailwind CSS
+- **Database:** Convex DB
+- **Authentication:** Clerk
+- **Real-time Features:** Convex, Stream.io
+- **State Management:** React Context API
+- **UI Components:** Radix UI, Lucide Icons
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Installation 📦
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Prerequisites ✅
+Ensure you have the following installed:
+- Node.js (>= 18)
+- npm or yarn
 
-## Learn More
+### Steps 🚀
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-username/interact.git
+   cd interact
+   ```
+2. Install dependencies:
+   ```sh
+   npm install  # or yarn install
+   ```
+3. Set up environment variables (create a `.env.local` file and configure Clerk, Convex, and Stream API keys).
 
-To learn more about Next.js, take a look at the following resources:
+4. Run the development server:
+   ```sh
+   npm run dev  # or yarn dev
+   ```
+5. Open `http://localhost:3000` in your browser.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Scripts 📜
+- `npm run dev` - Start the development server
+- `npm run build` - Build the project for production
+- `npm run start` - Start the production server
+- `npm run lint` - Run ESLint for code quality checks
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contributing 🤝
+Feel free to contribute! Fork the repo and submit a PR with your improvements.
 
-## Deploy on Vercel
+## License 📄
+This project is licensed under the MIT License.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Notes:
+- Replace `https://github.com/your-username/interact.git` with the actual repository URL.
+- Ensure to update the `.env.local` setup instructions with real API key details.
+- Mention any additional setup steps if required (like database initialization).
+
