@@ -20,6 +20,8 @@ import EndCallButton from "./EndCallButton";
 import CodeEditor from "./CodeEditor";
 import CustomControls from "@/hooks/useCustomCallControls";
 
+
+
 function MeetingRoom({isMicOn, isCameraOn}: {isMicOn: boolean; isCameraOn: boolean}) {
   // const router = useRouter();
   const [layout, setLayout] = useState<"grid" | "speaker">("speaker");
@@ -87,6 +89,7 @@ function MeetingRoom({isMicOn, isCameraOn}: {isMicOn: boolean; isCameraOn: boole
                   </Button>
 
                   <EndCallButton />
+                  
                 </div>
               </div>
             </div>
@@ -103,3 +106,5 @@ function MeetingRoom({isMicOn, isCameraOn}: {isMicOn: boolean; isCameraOn: boole
   );
 }
 export default MeetingRoom;
+
+
