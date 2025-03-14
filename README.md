@@ -58,10 +58,4 @@ Feel free to contribute! Fork the repo and submit a PR with your improvements.
 ## License 📄
 This project is licensed under the MIT License.
 
----
-
-### Notes:
-- Replace `https://github.com/your-username/interact.git` with the actual repository URL.
-- Ensure to update the `.env.local` setup instructions with real API key details.
-- Mention any additional setup steps if required (like database initialization).
 
